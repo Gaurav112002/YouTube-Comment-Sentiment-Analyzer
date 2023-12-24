@@ -37,7 +37,7 @@ def video_comments(video_id):
             part='snippet',
             videoId=video_id,
             order='relevance',
-            maxResults=300
+            maxResults=500
         ).execute()
         # extracting required info
         # from each result object
@@ -57,7 +57,7 @@ def video_comments(video_id):
                 video_response['nextPageToken']
             except KeyError:
                 break
-            if len(comments) >= 500:
+            if len(comments) > 500:
                 break
             else:
                 nextPageToken = video_response['nextPageToken']
