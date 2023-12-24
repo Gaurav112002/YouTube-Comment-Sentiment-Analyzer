@@ -8,10 +8,10 @@ import os
 import nltk
 from wordcloud import WordCloud, STOPWORDS
 
-# nltk.downloader
-#
-# nltk.data.path.append("/opt/render/nltk_data")
-# nltk.download('vader_lexicon', download_dir="/opt/render/nltk_data", quiet=True, halt_on_error=False)
+nltk.downloader
+
+nltk.data.path.append("/opt/render/nltk_data")
+nltk.download('vader_lexicon', download_dir="/opt/render/nltk_data", quiet=True, halt_on_error=False)
 
 
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -170,7 +170,3 @@ def generate_cloud(comments):
                           stopwords=stop_words).generate(all_text)
 
     return wordcloud
-
-
-# db = video_comments('mOVxIL3jPm0')
-# generate_cloud(db.Comment)
