@@ -187,7 +187,7 @@ def contact():
 
 @app.route('/gotowhatsapp', methods=['Get', 'POST'])
 def gotowhatsapp():
-    phone_number = '918890224717'
+    phone_number = '917230860415'
 
     # Get form data
     name = request.form.get('Name')
